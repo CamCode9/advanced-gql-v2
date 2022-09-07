@@ -97,8 +97,12 @@ module.exports = gql`
     createPost(input: NewPostInput!): Post!
     updateMe(input: UpdateUserInput!): User
     invite(input: InviteInput!): Invite!
-    signup(input: SignupInput!): AuthUser!
+    signup(input: SignupInput): AuthUser!
     signin(input: SigninInput!): AuthUser!
+  }
+
+  type Subscription {
+    newPost: Post
   }
 
 `
